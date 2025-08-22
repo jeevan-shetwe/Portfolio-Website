@@ -1,0 +1,99 @@
+/* =========================
+   Placeholder text color
+   ========================= */
+
+/* For input fields */
+.bg-dark.form-control::placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* For textarea fields */
+.bg-dark.form-control textarea::placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Chrome, Edge, Safari */
+.bg-dark.form-control::-webkit-input-placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Firefox 19+ */
+.bg-dark.form-control::-moz-placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Firefox 18- */
+.bg-dark.form-control:-moz-placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* IE 10+ */
+.bg-dark.form-control:-ms-input-placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* =========================
+   Status message animation
+   ========================= */
+.status-message {
+  animation: fadeIn 0.5s ease-in-out;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.status-success {
+  color: #00ff99; /* Green for success */
+}
+
+.status-error {
+  color: #ff4d4d; /* Red for error */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Hire Me Countdown Styling
+   ========================= */
+.hire-me {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 255, 153, 0.1);
+  border: 2px solid #00ff99;
+  padding: 15px 25px;
+  border-radius: 15px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.5);
+}
+
+.hire-me h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #00ff99;
+}
+
+.countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+  margin-top: 5px;
+}

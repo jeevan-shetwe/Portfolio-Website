@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import PortfolioNavbar from "./Navbar"; 
+
+// Importing all sections
+import Home from "./components/Home";
+import About from "./components/About";
+import Blogs from "./components/Blogs";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
+  // state for search bar (filters Blogs + Projects)
+  const [search, setSearch] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* Navbar (stays fixed at top) */}
+      <PortfolioNavbar search={search} setSearch={setSearch} />
+
+      {/* Main content, with padding so it doesn’t hide under navbar */}
+      <main style={{ paddingTop: "80px" }}>
+        <Home />
+        <About />
+        <Blogs search={search} />
+        <Projects search={search} />
+        <Contact />
+      </main>
+    </>
   );
 }
 
